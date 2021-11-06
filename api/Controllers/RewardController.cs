@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Security.Claims;
-using System.Threading.Tasks;
 using api.Dto;
 using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 
 namespace api.Controllers
 {
@@ -29,7 +25,6 @@ namespace api.Controllers
         [Authorize]
         public IEnumerable<RewardDtoGet> Get()
         {
-            var guid = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
             return _mapper.Map<List<RewardDtoGet>>(_hgContext.Rewards);
         }
     }

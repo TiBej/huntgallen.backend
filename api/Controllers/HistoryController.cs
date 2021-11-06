@@ -44,6 +44,7 @@ namespace api.Controllers
         }
         
         [HttpGet]
+        [Authorize]
         public IEnumerable<HistoryDtoGet> Get()
         {
             var guid = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
