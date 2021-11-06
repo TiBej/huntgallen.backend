@@ -108,3 +108,8 @@ C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\obj\Debug\
 C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\obj\Debug\netcoreapp3.1\api.dll
 C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\obj\Debug\netcoreapp3.1\api.pdb
 C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\obj\Debug\netcoreapp3.1\api.genruntimeconfig.cache
+C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\bin\Debug\netcoreapp3.1\AutoMapper.Collection.dll
+C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\bin\Debug\netcoreapp3.1\AutoMapper.Collection.EntityFrameworkCore.dll
+C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.ExpressionMapping.dll
+C:\Users\Tim OST\Documents\Projects\huntgallen\huntgallen.backend\api\obj\Debug\netcoreapp3.1\api.csproj.CopyComplete
