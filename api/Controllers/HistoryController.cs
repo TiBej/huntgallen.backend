@@ -48,9 +48,21 @@ namespace api.Controllers
         public IEnumerable<HistoryDtoGet> Get()
         {
             var guid = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-            var histories = _hgContext.Histories.Where(h => h.GUID == guid)
-                .Include(h => h.QR).ToList();
-            return _mapper.Map<List<HistoryDtoGet>>(histories);
+            var histories = _hgContext.Histories.Where(h => h.GUID == guid).ToList();
+            var qrCodes = _hgContext.QRs.ToList();
+            var historyDto = new List<HistoryDtoGet>();
+            foreach (var history in histories)
+            {
+                var crq = qrCodes.First(q => q.Id == history.QR_Id);
+                historyDto.Add(new HistoryDtoGet()
+                {
+                    Points = crq.Points,
+                    TimeStamp = history.TimeStamp,
+                    QRDesription = crq.Description
+                });
+            }
+                
+            return historyDto;
         }
     }
 }
