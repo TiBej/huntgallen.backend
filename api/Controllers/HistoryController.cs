@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Net;
 using System.Security.Claims;
@@ -32,6 +33,9 @@ namespace api.Controllers
             var qr = _hgContext.QRs.Where(qr => qr.Code == qrcode).ToList();
             if (qr.Count < 1) throw new Exception();
 
+            var oldHistory = _hgContext.Histories.FirstOrDefault(h => h.QR_Id == qr.FirstOrDefault().Id);
+            if (oldHistory != null) throw new Exception();
+            
             _hgContext.AddAsync(new History()
             {
                 QR_Id = qr.First().Id,
